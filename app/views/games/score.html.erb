@@ -1,3 +1,14 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>⚡️ RESULTS ⚡️</h1>
+
+<% if @result == 1  %>
+<p>Congratulation, <strong><%= @word.upcase %></strong> is a valid English word!"</p>
+
+<% elsif @result == 2  %>
+<p>Sorry but <strong><%= @word.upcase %></strong> is not a valid English word!"</p>
+
+<% else  %>
+<p>Sorry but <strong><%= @word.upcase %></strong> can't be built out of <%= @grid %> </p>
+<% end %>
+
+<p>... </p>
 <%= link_to "Play again", new_path %>
